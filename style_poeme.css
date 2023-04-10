@@ -1,0 +1,369 @@
+/*-------------Paramètres généreaux-------------*/
+
+/*VARIABLE ET ANIMATIONS*/
+
+@font-face {
+	font-family: MonumentExtended-Regular;
+	src: url(ressources/fonts/MonumentExtended/MonumentExtended-Regular.otf);
+}
+
+@font-face {
+	font-family: Coolvetica;
+	src: url(ressources/fonts/Coolvetica/coolvetica-rg.otf);
+}
+
+@font-face {
+	font-family: Vogue;
+	src: url(ressources/fonts/Voge/Vogue.ttf);
+}
+
+@keyframes marquee {
+	0% { left: 0; }
+	100% { left: -100%; }
+}
+
+#theme-sombre{
+    --couleur-fond: #1C1D21;
+    --couleur-ecriture: #eeddb5;
+	--couleur-secondaire: #00a9bf;
+}
+
+#theme-clair{
+    --couleur-fond: #eeddb5;
+    --couleur-ecriture: #1C1D21;
+	--couleur-secondaire: #00a9bf;
+}
+
+/*PARAMETRES CORPS DU SITE*/
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	margin: 0rem;
+	color: var(--couleur-ecriture);
+	background-color: var(--couleur-fond);
+	font-family: 'MonumentExtended-Regular';
+}
+
+h1{
+	margin: 0rem 0rem 0rem 1rem;
+	color: var(--couleur-fond);
+	font-family: Coolvetica;
+	font-size: 6rem;
+}
+
+.Poeme h3{
+	font: 3rem Coolvetica;
+	border: var(--couleur-ecriture) 0.2rem solid;
+	border-radius: 50px;
+	margin-top: 0;
+}
+
+.LigneTitreArticle h3{
+	font: 3rem Coolvetica;
+}
+
+h2{
+	color: var(--couleur-fond);
+	margin: -0.5rem 0rem 2rem 1rem;
+	font-family: Vogue;
+	font-size: 3rem;
+}
+
+h4{
+	line-height: 0.1px;
+}
+.ball{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	z-index: -100;
+	background-color: var(--couleur-ecriture);
+}
+
+
+/*-------------Paramètre du haut du site-------------*/
+
+/*HEADER ET AUTRE*/
+
+header{
+	display: flex;
+	flex-direction: column;
+}
+
+.Bienvenue{
+	display: flex;
+	flex-direction: column;
+	background-color: var(--couleur-ecriture);
+}
+
+.TitreSite{
+	display: flex;
+	align-items: flex-start;
+	gap: 2rem;
+	font-size: xx-large;	
+}
+
+.Logo{
+	height: 3.5rem;
+	margin-top: 1rem;
+}
+
+.ImgTitre{
+	height: 5rem;
+	position: absolute;
+	right: 0;
+	margin: 1.2rem 1rem 0rem 0rem;
+}
+
+.Theme{
+	color: var(--couleur-ecriture);
+	position: absolute;
+	right: 0;
+	margin-top: 7rem;
+	margin-right: 1rem;
+	background-color: var(--couleur-fond);
+	border-radius: 50px;
+	font-size: 12px;
+	border: 0.6rem solid;
+	border-color: var(--couleur-fond);
+}
+
+/*BANDEROLE HAUT DU SITE*/
+
+.Banderole {
+	height: 25px;
+	width: 100%;
+  
+	overflow: hidden;
+	position: relative;
+	margin-bottom: -0.5rem;
+}
+  
+.Banderole div {
+	display: block;
+	width: 200%;
+	height: 30px;
+  
+	position: absolute;
+	overflow: hidden;
+  
+	animation: marquee 10s linear infinite;
+}
+  
+.Banderole span {
+	float: left;
+	width: 50%;
+}
+
+/*------------- Paramètre séparation -------------*/
+
+.SeparartionSite{
+	height: 1rem;
+	color: var(--couleur-ecriture);
+	background-color: var(--couleur-ecriture);
+}
+
+.SeparationTitre{
+	height: 0.2rem;
+	color: var(--couleur-ecriture);
+	background-color: var(--couleur-ecriture);
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+/*-------------Paramètre titre des articles -------------*/
+
+/*TITRE ARTICLES ET AUTRE*/
+
+.TitreArticle{
+	margin-left: 2rem;
+	margin-right: 2rem;
+	margin-bottom: 2rem;
+}
+
+.LigneTitreArticle{
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.ParagrapheTitre{
+	right: 0;
+	text-align: right;
+	margin-left: 2rem;
+}
+
+/*BOITE ID TITRE ARTICLE*/
+
+.BoiteIdArticle{
+	border: var(--couleur-ecriture) 0.2rem solid;
+	display: flex;
+	gap: 2rem;
+	justify-content: space-between;
+}
+
+.AElementBoiteId{
+	background-color: var(--couleur-ecriture);
+	color: var(--couleur-fond);
+	padding: 0 1rem 0 1rem;
+}
+
+.CodeBarre{
+	display: flex;
+	background-color: var(--couleur-ecriture);
+	color: var(--couleur-fond);
+	gap: 1rem;
+	padding: 0 1rem 0 1rem;
+	align-items: center;
+}
+
+.CodeBarre img{
+	height: 3rem;
+}
+
+.Animation{
+	height: 4rem;
+}
+
+/*-------------Paramètre des différents articles -------------*/
+
+/*SOMMAIRE*/
+
+.CorpsSommaire{
+	display: flex;
+	flex-direction: column;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.LigneSommaire{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4rem;
+	border: var(--couleur-ecriture) 0.2rem solid;
+	border-radius: 50px;
+	margin-left: 8rem;
+	margin-right: 8rem;
+	margin-top: 1rem;
+}
+
+.SymboleSommaire{
+	right: 0;
+	height: 2rem;
+	margin-left: 1rem;
+}
+
+.ParagrapheJaponais{
+	text-align: right;
+	margin-left: 1rem;
+}
+
+.LigneSommaire a{
+	font-size: 1.2rem;
+	color: var(--couleur-ecriture);
+	text-decoration: none;
+}
+
+/*POEME*/
+
+.Poeme{
+	margin-top: 4rem;
+	margin-left: 8rem;
+	margin-right: 8rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.CorpsPoeme{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-bottom: 4rem;
+	gap: 3rem;
+}
+
+.CorpsPoeme span{
+	color: var(--couleur-secondaire);
+}
+
+.ImgLimace{
+	min-width: 20%;
+	max-width: 30%;
+	max-height: auto;
+	border-radius: 50px;
+}
+
+/*NOTE VOCABULAIRE*/
+
+.DefinitionListe{
+	display: flex;
+	flex-direction: column;
+}
+
+.Definition{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 3rem;
+	text-align: right;
+}
+
+.Mot{
+	color: var(--couleur-secondaire);
+}
+
+/*FICHE BIOGRAPHIQUE*/
+
+.CorpsFicheBio{
+	margin-left: 8rem;
+	margin-right: 8rem;
+	margin-top: 4rem;
+	display: flex;
+	gap: 4rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.NomAuteur{
+	color: var(--couleur-secondaire);
+}
+
+.ImgAuteur{
+	border: var(--couleur-ecriture) 1rem solid;
+	color: var(--couleur-fond);
+	border-radius: 50px;
+	height: 21.5rem;
+}
+
+.ImgAuteur p{
+	text-align: center;
+	margin-top: 10rem;
+	position: absolute;
+}
+
+.ImgAuteur img{
+	visibility: hidden;
+	border-radius: 30px;
+}
+
+/*MODE EMPLOI*/
+
+.CorpsModeDemploi{
+	margin-top: 4rem;
+	margin-left: 8rem;
+	margin-right: 8rem;
+	margin-bottom: 4rem;
+}
+
+.Tabloid{
+	width: 100%;
+	table-layout: fixed;
+}
